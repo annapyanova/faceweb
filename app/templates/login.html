@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Sign In</h1>
+    <form action="/index" method="post" novalidate>
+        <div class="form-floating mb-3">
+            <input name="username" type="text" class="form-control" id="floatingInput" placeholder="Anna">
+            <label for="floatingInput">Type Your Name</label>
+        </div>
+        <input type="submit" name="submitbutton" class="btn btn-light" value="Submit">
+        <style>
+            div{
+                margin: 10px;
+            }
+            input.btn{
+                margin: 10px;
+                position: center;
+                text-align: center;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </form>
+{% endblock %}
