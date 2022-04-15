@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+./__pycache__/
 *.py[cod]
 *$py.class
 
@@ -131,4 +132,4 @@ dmypy.json
 # New Types
 .txt
 
-/.idea
+.idea
