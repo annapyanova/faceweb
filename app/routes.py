@@ -1,7 +1,7 @@
 from flask import render_template, request
 from app import app
 
-name = "(введи своё имя, солнце)"
+name = "(Введите своё имя)"
 @app.route('/')
 @app.route('/index',methods=['GET', 'POST'])
 def index():
@@ -14,19 +14,15 @@ def index():
           name = username
     posts = [
         {
-            'author': {'username': 'Аня'},
-            'body': 'Куда будем ставить микроволновку?'
-        },
-        {
-            'author': {'username': 'Инга'},
-            'body': 'Поставим к нам в комнату'
-        }, 
-        {
-            'author': {'username': 'Сабина'},
-            'body': 'В тумбочку!'
+            'author': {'username': 'Note'},
+            'body': 'Данный сервис предназначен для автоматического трекинга объектов. Пожалуйста, загрузите свое видео:'
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template('login.html', title='Sign In')
+
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+    return render_template('download.html', title='Download')
